@@ -22,7 +22,7 @@ func hello(w http.ResponseWriter, req *http.Request) {
 }
 
 func main() {
-	fileServer := http.FileServer(http.Dir("./webgame"))
+	fileServer := http.FileServer(http.Dir("./doc"))
 	http.Handle("/", fileServer)
 	http.HandleFunc("/index", hello)
 
